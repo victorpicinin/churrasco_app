@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="amigos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Amigo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Input with value -->
+  <ion-item color="light">
+    <ion-label>Nome:</ion-label>
+    <ion-input #nome></ion-input>
+  </ion-item>
+  
+  <ion-item color="light">
+    <ion-label>Email:</ion-label>
+    <ion-input #email></ion-input>
+  </ion-item>
+  
+  <ion-item color="light">
+    <ion-label>Telefone:</ion-label>
+    <ion-input #telefone type="number" value="nivel"></ion-input>
+  </ion-item>
+  
+  <ion-button shape='block' (click)="adicionar(user)">Salvar</ion-button>
+  </ion-content>
+  

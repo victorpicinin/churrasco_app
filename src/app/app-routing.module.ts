@@ -10,6 +10,26 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'amigos',
+    loadChildren: () => import('./amigos/amigos.module').then( m => m.AmigosPageModule)
+  },
+  {
+    path: 'pedidos',
+    loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
+  },
+  {
+    path: 'editar-amigo',
+    loadChildren: () => import('./editar-amigo/editar-amigo.module').then( m => m.EditarAmigoPageModule)
+  },
+  {
+    path: 'novo-amigo',
+    loadChildren: () => import('./novo-amigo/novo-amigo.module').then( m => m.NovoAmigoPageModule)
   }
 ];
 
