@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Nova Festa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="light">
+    <ion-label position="stacked">Nome do Evento:</ion-label>
+    <ion-input #nome_evento></ion-input>
+  </ion-item>
+  
+  <ion-item color="light">
+    <ion-label position="stacked">Contato:</ion-label>
+    <ion-input #contato_evento></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Data do evento</ion-label>
+    <ion-datetime displayFormat="DD MM YY" placeholder="Selecione a data"></ion-datetime>
+  </ion-item>
+  <ion-button shape='block' color="dark" (click)="call_selecionar_amigos()">Proximo</ion-button>
+</ion-content>

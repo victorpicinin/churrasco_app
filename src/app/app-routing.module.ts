@@ -30,6 +30,18 @@ const routes: Routes = [
   {
     path: 'novo-amigo',
     loadChildren: () => import('./novo-amigo/novo-amigo.module').then( m => m.NovoAmigoPageModule)
+  },
+  {
+    path: 'nova-festa',
+    loadChildren: () => import('./nova-festa/nova-festa.module').then( m => m.NovaFestaPageModule)
+  },
+  {
+    path: 'selecionar-amigos',
+    loadChildren: () => import('./selecionar-amigos/selecionar-amigos.module').then( m => m.SelecionarAmigosPageModule)
+  },
+  {
+    path: 'selecionar-produtos',
+    loadChildren: () => import('./selecionar-produtos/selecionar-produtos.module').then( m => m.SelecionarProdutosPageModule)
   }
 ];
 

@@ -26,6 +26,11 @@ export class AppComponent implements OnInit {
       title: 'Amigos',
       url: '/amigos',
       icon: 'body'
+    },
+    {
+      title: 'Festas',
+      url: '/nova-festa',
+      icon: 'analytics'
     }
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

@@ -14,6 +14,7 @@ export class AmigosPage implements OnInit {
   @ViewChild('lista') lista: IonList
   constructor(public navCtrl: NavController) { }
 
+  
   ngOnInit() {
     this.usuarios = JSON.parse(localStorage.getItem('data'));
   }
