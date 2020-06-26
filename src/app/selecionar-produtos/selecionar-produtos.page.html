@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>selecionar_produtos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Selecionar Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list #lista>
+    <!-- | async-->
+    <ion-item-sliding *ngFor="let user of usuarios | async">
+      <ion-item>
+        <ion-checkbox color="dark" style="zoom: 2;"></ion-checkbox>
+        <ion-label>
+          <h2><b>{{ user.name }}</b></h2>
+          <ion-textarea>
+          <p>{{ user.desc }}</p>
+          </ion-textarea>
+        </ion-label>
+  
+        <ion-label style="text-align: left;">
+          <b><h2>{{ user.preco }}</h2></b>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-button shape='block' color="dark" (click)="call_home()">Proximo</ion-button>
 </ion-content>

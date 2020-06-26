@@ -1,7 +1,7 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonList } from '@ionic/angular';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-selecionar-amigos',
   templateUrl: './selecionar-amigos.page.html',
@@ -10,10 +10,12 @@ import { IonList } from '@ionic/angular';
 export class SelecionarAmigosPage implements OnInit {
   usuarios: any;
   @ViewChild('lista') lista: IonList
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
     this.usuarios = JSON.parse(localStorage.getItem('data'));
   }
-
+  call_selecionar_produtos(){
+    this.navCtrl.navigateRoot('/selecionar-produtos')
+  }
 }
